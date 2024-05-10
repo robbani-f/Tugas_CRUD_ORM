@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah Produk Baru</title>
-    <!-- Tambahkan link CSS atau library lain jika diperlukan -->
+    <link rel="stylesheet" href="{{ asset('csscopy/create.css') }}"> <!-- Tambahkan ini untuk menghubungkan file CSS -->
 </head>
 <body>
     @extends('layouts.app')
@@ -12,7 +12,7 @@
     @section('content')
         <div class="container">
             <h1>Tambah Produk Baru</h1>
-            <form action="{{ route('products.store') }}" method="POST">
+            <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data"> <!-- Tambahkan enctype="multipart/form-data" -->
                 @csrf
                 <div class="form-group">
                     <label for="nama">Nama Produk</label>
@@ -31,8 +31,8 @@
                     <input type="number" class="form-control" id="berat" name="berat" placeholder="Berat" required>
                 </div>
                 <div class="form-group">
-                    <label for="gambar">URL Gambar</label>
-                    <input type="text" class="form-control" id="gambar" name="gambar" placeholder="URL Gambar" required>
+                    <label for="gambar">Gambar</label> <!-- Perubahan ini -->
+                    <input type="file" class="form-control-file" id="gambar" name="gambar" accept="image/*" required> <!-- Perubahan ini -->
                 </div>
                 <div class="form-group">
                     <label for="kondisi">Kondisi</label>

@@ -29,7 +29,6 @@ return [
     */
 
     'disks' => [
-
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),
@@ -56,6 +55,12 @@ return [
             'throw' => false,
         ],
 
+        // Contoh tambahan disk
+        // 'another_disk' => [
+        //     'driver' => 'local',
+        //     'root' => storage_path('app/another_disk'),
+        //     'throw' => false,
+        // ],
     ],
 
     /*

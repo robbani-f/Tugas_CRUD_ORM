@@ -23,7 +23,7 @@
     <main>
         <!-- Tambahkan konten utama admin -->
         <div class="content">
-            <h2>Selamat datang di Halaman Admin</h2>
+            
             <!-- Tampilkan daftar produk di sini -->
             <table>
                 <thead>
@@ -48,7 +48,7 @@
                         <td>{{ $product->kondisi }}</td>
                         <td>{{ $product->deskripsi }}</td>
                         <td>
-                            <a href="{{ route('products.edit', $product->id) }}">Edit</a> |
+                            <a href="{{ route('products.update', $product->id) }}">Edit</a> |
                             <form action="{{ route('products.destroy', $product->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')

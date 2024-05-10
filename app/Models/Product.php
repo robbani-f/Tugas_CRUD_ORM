@@ -23,4 +23,6 @@ class Product extends Model
         'kondisi', 
         'deskripsi'
     ];
+
+    // Definisikan metode atau perilaku tambahan di sini sesuai kebutuhan aplikasi Anda
 }

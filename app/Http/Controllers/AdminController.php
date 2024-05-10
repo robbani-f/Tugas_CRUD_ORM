@@ -53,7 +53,6 @@ class AdminController extends Controller
         ]);
 
         $product->update($validatedData);
-
         return redirect('/admin')->with('success', 'Produk berhasil diperbarui');
     }
 
